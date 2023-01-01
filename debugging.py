@@ -1,10 +1,10 @@
-import pygame as pg
+import pygame
 
-pg.init()
-font = pg.font.Font(None, 30)
+pygame.init()
+font = pygame.font.Font(None, 30)
 
-def debug(info, x = 10, y = 10):
-    display_surface = pg.display.get_surface()
+def debug(info, y = 10, x = 10):
+    display_surface = pygame.display.get_surface()
     debug_surface = font.render(str(info), True, 'Black')
     debug_rect = debug_surface.get_rect(topleft = (x, y))
     display_surface.blit(debug_surface, debug_rect)
